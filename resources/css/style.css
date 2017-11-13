@@ -1,0 +1,667 @@
+/* -------------------------------------
+GLOBAL STYLES
+--------------------------------------*/
+
+html {
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Hind Siliguri', Helvetica, Arial, sans-serif;
+    margin: 0;
+}
+
+a, a:link, a:visited {
+    color: #4abdac;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:active, a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    font-size: 1.75rem;
+    font-weight: 300;
+	color: #212F3C;
+}
+
+h2 {
+    letter-spacing: -.05rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+	color: #212F3C;
+}
+
+h3 {
+    font-size: 1.35rem;
+    line-height: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+	color: #212F3C;
+}
+
+h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    letter-spacing: -.05rem;
+	color: #212F3C;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+/* -------------------------------------
+LAYOUT
+--------------------------------------*/
+
+
+.flex-container {
+    display: flex;
+}
+
+.center {
+    align-items: center;
+}
+
+.stretch {
+    align-items: stretch;
+}
+
+.vertical {
+    flex-direction: column;
+}
+
+.horz {
+    flex-direction: row;
+}
+
+.center-align {
+    justify-content: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.desktop-hide {
+    display: none;
+}
+
+/* -------------------------------------
+HEADER
+--------------------------------------*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 2;
+    border-bottom: 1px #ccc solid;
+}
+
+.logo {
+    margin: 5px 24px 0; 
+}
+
+.logo h1:before {
+    content: ' ';
+    float: left;
+    display: block;
+    width: 30px;
+    height: 35px;
+    background: url(../images/ic-logo.svg) no-repeat;
+    background-size: cover;
+}
+
+.logo a {
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: -.05rem;
+}
+
+.logo-bold {
+    font-weight: 700;
+    margin-right: -3px;
+}
+
+.logo-norm {
+    font-weight: 400;
+    margin-right: -3px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 0;
+}
+
+nav ul li {
+    float: left;
+    margin-right: 1rem;
+}
+
+nav ul li:last-child {
+    margin-right: 1.5rem;
+}
+
+nav ul li a, nav ul li a:link, nav ul li a:visited {
+    font-weight: 600;
+    color: #212F3C;
+    text-decoration: none;
+}
+
+nav ul li a:active, nav ul li a:hover {
+    color: #4abdac;
+}
+
+/* -------------------------------------
+main SECTION
+--------------------------------------*/
+
+#main {
+    width: 100%;
+    height: auto;
+    background: url(..resources/images/main-bg.png) no-repeat center right #ccc;
+    background-size: contain;
+    margin-top: 4rem;
+    color: #212F3C;
+}
+
+#main h2 {
+    font-size: 2.75rem;
+    line-height: 3rem;
+}
+
+.main-left {
+    width: 60%;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+}
+
+.main-left img {
+    width: 100%;
+    height: auto;
+}
+
+.main-right {
+    width: 423px;
+}
+
+.cta-button, .cta-button:link, .cta-button:visited {
+    padding: 8px;
+    text-align: center;
+    display: block;
+    width: 70%;
+	background-color: #212F3C;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 1.35rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.cta-button:active, .cta-button:hover {
+    background-color: #fff;
+    color: #4abdac;
+    padding: 8px;
+}
+
+/* -------------------------------------
+ABOUT SECTION
+--------------------------------------*/
+
+#about {
+    width: 100%;
+    height: auto;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+}
+
+.about-left {
+    width: 60%;
+    padding: 2rem 1.5rem;
+}
+
+.about-left img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.about-left p {
+    margin-top: 1.5rem;
+}
+
+.about-left p:last-child {
+    margin-bottom: 2rem;
+}
+
+.about-right {
+    width: 423px;
+    border-left: 1px #ccc solid;
+}
+
+.about-side {
+    width: 100%;
+    border-bottom: 1px #ccc solid;
+}
+
+.about-side:first-child {
+    padding-top: 1rem;
+}
+
+.about-side:last-child {
+    background-color: #eee;
+}
+
+.about-side-left {
+    width: 35%;
+    margin: 16px;
+    overflow: hidden;
+}
+
+.about-side-left img {
+    width: 175%;
+    height: auto;
+    position: relative;
+    left: -47px;
+    z-index: 1;
+}
+
+.about-side-right {
+    margin: 1rem;
+    max-width: 220px;
+}
+
+.about-side-right h4 {
+    font-size: 1.15rem;
+    margin-bottom: .5rem;
+}
+
+.about-side-right p {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+/* -------------------------------------
+COURSES SECTION
+--------------------------------------*/
+
+#courses {
+    width: 100%;
+    height: auto;
+    background-color: #D5D8DC;
+    padding: 2rem 0;
+}
+
+#courses h2 {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+.courses-list {
+    width: 85%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.course-category {
+    flex-grow: 3;
+    width: 25%;
+    margin: 2rem 2rem 0 0;
+    background: #fff;
+}
+
+.course-category img {
+    width: 100%;
+    height: auto;
+}
+
+.course-title {
+    padding: 16px;
+}
+
+.course-title h3 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -.05rem;
+}
+
+.course-selections {
+    padding: 0 1rem 1.5rem 1rem;
+}
+
+.selections-heading {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: .25rem;
+    font-weight: 400;
+}
+
+/* -------------------------------------
+THESIS SECTION
+--------------------------------------*/
+
+#thesis {
+    width: 100%;
+    height: auto;
+    padding: 2rem 0 0;
+}
+
+#thesis h2 {
+    margin-bottom: 0;
+    font-size: 2.5rem;
+}
+
+#thesis h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    letter-spacing: -0.05rem;
+}
+
+.thesis-left {
+    width: 60%;
+    padding: 2rem 1.5rem;
+}
+
+.thesis-left video {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.thesis-right {
+    width: 423px;
+}
+
+.thesis-side {
+    width: 100%;
+}
+
+.thesis-side:first-child {
+    margin-top: 2rem;
+    background-color: #eee;
+}
+
+.thesis-side-left {
+    width: 35%;
+    max-width: 125px;
+    margin: 1rem;
+    overflow: hidden;
+}
+
+.thesis-side-left img {
+    width: 175%;
+    height: auto;
+    position: relative;
+    left: -47px;
+    z-index: 1;
+}
+
+.thesis-side-right {
+    margin: 1rem;
+    max-width: 220px;
+}
+
+.thesis-side-right h4 {
+    font-size: 1.15rem;
+    margin-bottom: .5rem;
+}
+
+.thesis-side-right p {
+    font-size: .9rem;
+    margin-bottom: .5rem;
+}
+
+/* -------------------------------------
+FOOTER SECTION
+--------------------------------------*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 100%;
+    border-top: 1px #ccc solid;
+}
+
+.copyright, .footer {
+    margin: .5rem 1.5rem;
+    color: #888;
+    
+}
+
+footer ul {
+    list-style-type: none;
+    margin-top: 0;
+}
+
+footer ul li {
+    float: left;
+    margin-right: 1rem;
+}
+
+footer ul li a, footer ul li a:link, footer ul li a:visited {
+    color: #888;
+    text-decoration: none;
+}
+
+footer ul li a:active, footer ul li a:hover {
+    color: #4abdac;
+}
+
+/* -------------------------------------
+MOBILE ONLY STYLES (LESS THAN 960)
+--------------------------------------*/
+
+@media only screen and (max-width: 959px) {
+    
+    .flex-container {
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        display: none;
+    }
+    
+    
+    header {
+        width: 100%;
+        border-width: 0 0 1px 0;
+    }
+    
+    nav {
+        width: 100%;
+    }
+    
+    nav ul {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+    }
+    
+    nav ul li {
+        display: block;
+        width: 20%;
+        text-align: center;
+        margin: 0;
+    }
+    
+    nav ul li:first-child {
+        display: block;
+    }
+    
+    nav ul li:nth-child(4n + 0) {
+        display: none;
+    }
+    
+    nav ul li:last-child {
+        margin: 0;
+    }
+    
+    nav ul li a {
+        display: block;
+        width: 100%;
+        height: 40px;
+        text-indent: -9999px;
+    }
+    
+    .nav-logo {
+        background: url(../images/ic-logo.svg) center center no-repeat;
+    }
+    
+    .nav-campus {
+        background: url(../images/ic-on-campus.svg) center center no-repeat;
+    }
+    
+    .nav-online {
+        background: url(../images/ic-online.svg) center center no-repeat;
+    }
+    
+    .nav-login {
+        background: url(../images/ic-login.svg) center center no-repeat;
+    }
+    
+    #main {
+        background-position: center bottom;
+    }
+    
+    #main h2, #courses h2, #thesis h2 {
+        font-size: 2.25rem;
+        line-height: 2.25rem;
+    }
+    
+    #main h3 {
+        font-size: 1.15rem;
+        line-height: 1.5rem;
+    }
+    
+    .main-left {
+        width: 100%;
+        height: 180px;
+        padding: 0;
+        overflow: hidden;
+    }
+    
+    .main-right {
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+    
+    #main a {
+        margin-top: 1.5rem;
+        padding: 8px 0;
+        width: 100%;
+    }
+    
+    .about-left {
+        display: none;
+    }
+    
+    .about-right {
+        border: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+    
+    .about-side {
+        border: 0;
+    }
+    
+    .about-side:last-child {
+        background-color: transparent;
+    }
+    
+    .about-side-left {
+        padding: 0;
+        margin: 0 1rem;
+        width: 100%;
+    }
+    
+    .about-side-left img {
+        width: 100%;
+        height: auto;
+        position: static;
+    }
+    
+    .about-side-right {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .about-side-right h4 {
+        font-size: 1.2rem;
+    }
+    
+    .about-side-right p, .copyright {
+        font-size: .9rem;
+    }
+    
+    #courses, #thesis {
+        padding: 0;
+		background-color: #fff;
+    }
+    
+    #courses h2 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    #courses h3 {
+        font-size: 1.2rem;
+    }
+    
+    .courses-list {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 1rem 0;
+		color: #D5D8DC;
+		background-color: #fff;
+    }
+    
+	.course-title {
+		background-color: #D5D8DC;
+	}
+	
+    .course-category {
+        width: 100%;
+        margin: 0 1rem .5rem 1rem;
+    }
+    
+    .course-category img, .course-selections, .thesis-left h3, .thesis-left p, .thesis-right, .legal {
+        display: none;
+    }
+    
+    
+    #thesis h2 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .thesis-left {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+}
